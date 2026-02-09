@@ -52,7 +52,14 @@ export default function MovieSirPage() {
             <span className="text-gray-400">역할:</span>{" "}
             <span className="text-gray-700">인프라 · CI/CD · 보안</span>
           </p>
-          <div className="flex gap-3 pt-4">
+          <div className="flex flex-wrap gap-2 pt-3 mb-4">
+            {["KakaoCloud", "Docker", "GitHub Actions", "Nginx", "PostgreSQL", "Redis", "Let's Encrypt", "fail2ban"].map((tech) => (
+              <span key={tech} className="px-2.5 py-1 text-xs bg-gray-100 text-gray-600 rounded">
+                {tech}
+              </span>
+            ))}
+          </div>
+          <div className="flex gap-3 pt-1">
             <Link
               href="https://moviesir.cloud"
               target="_blank"
@@ -75,18 +82,22 @@ export default function MovieSirPage() {
         {/* 핵심 성과 */}
         <section className="mb-16 p-6 bg-gray-50 rounded-lg">
           <h2 className="text-lg font-bold text-gray-900 mb-4">핵심 성과</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <div className="p-4 bg-white rounded-lg">
-              <p className="text-2xl font-bold text-gray-900">5,400건 → 0건</p>
-              <p className="text-sm text-gray-500">SSH 브루트포스 차단</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="p-4 bg-white rounded-lg text-center">
+              <p className="text-2xl font-bold text-gray-900">5,227 → 0</p>
+              <p className="text-sm text-gray-500">SSH 공격 차단</p>
             </div>
-            <div className="p-4 bg-white rounded-lg">
-              <p className="text-2xl font-bold text-gray-900">92% 감소</p>
-              <p className="text-sm text-gray-500">Docker 이미지 경량화</p>
+            <div className="p-4 bg-white rounded-lg text-center">
+              <p className="text-2xl font-bold text-gray-900">92%</p>
+              <p className="text-sm text-gray-500">이미지 경량화</p>
             </div>
-            <div className="p-4 bg-white rounded-lg">
+            <div className="p-4 bg-white rounded-lg text-center">
               <p className="text-2xl font-bold text-gray-900">~245ms</p>
               <p className="text-sm text-gray-500">API 응답시간</p>
+            </div>
+            <div className="p-4 bg-white rounded-lg text-center">
+              <p className="text-2xl font-bold text-gray-900">83%</p>
+              <p className="text-sm text-gray-500">배포 시간 단축</p>
             </div>
           </div>
         </section>

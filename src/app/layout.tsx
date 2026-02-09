@@ -27,6 +27,9 @@ export const metadata: Metadata = {
     locale: "ko_KR",
     type: "website",
   },
+  other: {
+    "X-UA-Compatible": "IE=edge",
+  },
 };
 
 export default function RootLayout({
